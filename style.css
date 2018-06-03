@@ -1,0 +1,312 @@
+@import url(https://fonts.googleapis.com/css?family=Bevan);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic&subset=latin,cyrillic);
+
+:focus {
+    outline: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    background: #fff;
+    background: url('images/skyBody_new.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', Tahoma, Arial, sans-serif;
+    min-width: 950px;
+}
+
+.bodyGame {
+    background: #d4e1e6;
+}
+
+#iPage {
+    position: relative;
+    width: 56%;
+    height: auto;
+    padding-bottom: 42%;
+    margin: 1% auto;
+    z-index: 8;
+    overflow: hidden;
+}
+
+.page-game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#hud {
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    bottom: 0.5%;
+    right: 0.5%;
+    width: 95px;
+    font-size: 20px;
+}
+
+#score {
+    color: yellow;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+}
+
+#canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: #D4D4D4;
+}
+
+#startGame, #endGame {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+#Menu {
+    width: 500px;
+    position: relative;
+    left: 60%;
+    top: 20px;
+    z-index: 10;
+    height: 40px;
+}
+
+.header {
+    background-color: #457981;
+    height: 70px;
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 7px solid rgba(0, 0, 0, 0.08);
+}
+
+.logoHeader {
+    position: absolute;
+    width: 250px;
+    height: auto;
+    left: 10%;
+    z-index: 9;
+    font-family: 'Bevan', cursive;
+    font-size: 45px;
+    color: #F9ECAA;
+    text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.logoHeader span {
+    color: #FFD819;
+}
+
+.coinHeader {
+    position: absolute;
+    top: 17px;
+    left: 250px;
+    width: 44px;
+    height: 44px;
+    background: url('images/coinHeader.png') left top;
+    background-repeat: no-repeat;
+    -webkit-animation: play 1s steps(10) infinite;
+    animation: play 1s steps(10) infinite;
+    z-index: 10;
+}
+
+@-webkit-keyframes play {
+    100% {
+        background-position: -440px;
+    }
+}
+
+input[type="button"] {
+    width: 140px;
+    height: 40px;
+    border: 2px solid #fff;
+    outline: solid 2px rgba(255, 255, 255, 0);
+    background-color: #64888F;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: #6E959C;
+    color: #fff;
+    border: 2px solid #F9ECAA;
+}
+
+#Menu > .active {
+    background: #6E959C;
+    border: 2px solid #F9ECAA;
+}
+
+#btnStart {
+    position: absolute;
+    width: 6em;
+    height: 6em;
+    left: 50%;
+    margin-left: -3em;
+    margin-top: 27%;
+    color: #063145;
+    background-color: rgba(248, 239, 162, 0.63);
+    font-size: 2.5em;
+    border-radius: 50%;
+    z-index: 10;
+    border: rgb(251, 219, 103) 17px solid;
+    -webkit-animation: tada 1s infinite;
+    animation: tada 1s infinite;
+}
+
+@-webkit-keyframes tada {
+    0% {
+        -webkit-transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(0.97, 0.97);
+    }
+    100% {
+        -webkit-transform: scale(1, 1);
+    }
+}
+
+#timer {
+    display: none;
+    position: absolute;
+    background-color: black;
+    opacity: 0.7;
+    font-size: 1.1em;
+    color: #ffd113;
+    height: 30px;
+    width: 80px;
+    top: 5px;
+    right: 5px;
+    line-height: 30px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.description {
+    position: absolute;
+    text-align: center;
+    font-family: 'Roboto', Tahoma, Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    padding-top: 6%;
+    font-family: 'Roboto', sans-serif;
+    color: #344C56;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+    margin: 2%;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    color: #344C56;
+    margin: 6%;
+}
+
+.content {
+    color: #121E21;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: justify
+}
+
+.content span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contentImg {
+    margin-top: 38%;
+    margin-left: 58%;
+    -webkit-animation: tadatadata 3.4s ease-out;
+}
+
+@-webkit-keyframes tadatadata {
+    0% {
+        -webkit-transform: translateX(-1600px) scale(0, 0);
+    }
+    45% {
+        -webkit-transform: translateX(-800px) scale(0, 0);
+    }
+    60% {
+        -webkit-transform: translateX(0) scale(1, 1);
+    }
+    69% {
+        -webkit-transform: translateX(0) rotate(-60deg);
+        transform-origin: 150px 20px;
+    }
+    77% {
+        -webkit-transform: translateX(0) rotate(70deg);
+        transform-origin: 160px 20px;
+    }
+    82% {
+        -webkit-transform: translateX(0) rotate(-60deg);
+        transform-origin: 160px 20px;
+    }
+    86% {
+        -webkit-transform: translateX(0) rotate(50deg);
+        transform-origin: 160px 20px;
+    }
+    90% {
+        -webkit-transform: translateX(0) rotate(-20deg);
+        transform-origin: 160px 20px;
+    }
+
+    94% {
+        -webkit-transform: translateX(0) rotate(10deg);
+        transform-origin: 160px 20px;
+    }
+    97% {
+        -webkit-transform: translateX(0) rotate(-6deg);
+        transform-origin: 160px 20px;
+    }
+    99% {
+        -webkit-transform: translateX(0) rotate(3deg);
+        transform-origin: 160px 20px;
+    }
+    100% {
+        -webkit-transform: translateX(0) scale(1, 1);
+    }
+}
+
+.showitems {
+    display: block !important;
+}
+
+.tableW {
+    border: solid 5px #658B96;
+    border-collapse: separate;
+    margin: 10px auto 10px auto;
+}
+
+.tW, th {
+    text-align: center;
+    background: #D9F1F8;
+    border: 1px solid #527079;
+    padding: 10px 35px;
+    font-size: 1em;
+}
+
+@media (max-width: 767px) {
+    h1 {
+        padding-top: 2%;
+    }
+
+    #Menu {
+        left: 40%;
+    }
+}
